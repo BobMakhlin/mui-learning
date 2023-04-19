@@ -1,8 +1,8 @@
 import { Button, Typography, styled } from "@mui/material";
 
 function App() {
-  const BlueButton = styled(Button)({
-    backgroundColor: "skyblue",
+  const BlueButton = styled(Button)(({ theme }) => ({
+    backgroundColor: theme.palette.otherColor.main,
     color: "#888",
     m: 5,
     "&:hover": {
@@ -12,7 +12,7 @@ function App() {
       backgroundColor: "gray",
       color: "white",
     },
-  });
+  }));
 
   return (
     <div className="App">
