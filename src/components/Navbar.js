@@ -1,5 +1,6 @@
 import {
   AppBar,
+  Avatar,
   Badge,
   Box,
   InputBase,
@@ -9,8 +10,8 @@ import {
 } from "@mui/material";
 import React from "react";
 import LogoDevIcon from "@mui/icons-material/LogoDev";
-import EmailIcon from '@mui/icons-material/Email';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+import EmailIcon from "@mui/icons-material/Email";
+import NotificationsIcon from "@mui/icons-material/Notifications";
 
 const StyledToolbar = styled(Toolbar)({
   justifyContent: "space-between",
@@ -23,6 +24,20 @@ const Search = styled("div")(({ theme }) => ({
   width: "40%",
 }));
 const Icons = styled(Box)(({ theme }) => ({
+  display: "none",
+  alignItems: "center",
+  gap: "20px",
+  [theme.breakpoints.up("sm")]: {
+    display: "flex",
+  },
+}));
+const UserBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  gap: "10px",
+  [theme.breakpoints.up("sm")]: {
+    display: "none",
+  },
 }));
 
 const Navbar = () => {
@@ -45,7 +60,12 @@ const Navbar = () => {
           <Badge badgeContent={4} color="error">
             <NotificationsIcon></NotificationsIcon>
           </Badge>
+          <Avatar sx={{ width: 30, height: 30 }}>AB</Avatar>
         </Icons>
+        <UserBox>
+          <Avatar sx={{ width: 30, height: 30 }}>AB</Avatar>
+          <Typography variant="span">Alex</Typography>
+        </UserBox>
       </StyledToolbar>
     </AppBar>
   );
