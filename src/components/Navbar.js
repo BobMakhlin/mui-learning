@@ -4,6 +4,8 @@ import {
   Badge,
   Box,
   InputBase,
+  Menu,
+  MenuItem,
   styled,
   Toolbar,
   Typography,
@@ -12,6 +14,8 @@ import React from "react";
 import LogoDevIcon from "@mui/icons-material/LogoDev";
 import EmailIcon from "@mui/icons-material/Email";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import { useState } from "react";
+import { useCallback } from "react";
 
 const StyledToolbar = styled(Toolbar)({
   justifyContent: "space-between",
@@ -41,10 +45,20 @@ const UserBox = styled(Box)(({ theme }) => ({
 }));
 const UserAvatar = styled(Avatar)({
   width: "30px",
-  height: "30px"
+  height: "30px",
+  cursor: "pointer",
 });
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleAvatarClick = useCallback(() => {
+    setIsMenuOpen(true);
+  }, []);
+  const handleMenuClose = useCallback(() => {
+    setIsMenuOpen(false);
+  }, []);
+
   return (
     <AppBar position="sticky">
       <StyledToolbar>
@@ -64,13 +78,31 @@ const Navbar = () => {
           <Badge badgeContent={4} color="error">
             <NotificationsIcon></NotificationsIcon>
           </Badge>
-          <UserAvatar>AB</UserAvatar>
+          <UserAvatar onClick={handleAvatarClick}>AB</UserAvatar>
         </Icons>
-        <UserBox>
+        <UserBox onClick={handleAvatarClick}>
           <UserAvatar>AB</UserAvatar>
           <Typography variant="span">Alex</Typography>
         </UserBox>
       </StyledToolbar>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        onClose={handleMenuClose}
+        open={isMenuOpen}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+      >
+        <MenuItem>Profile</MenuItem>
+        <MenuItem>My account</MenuItem>
+        <MenuItem>Logout</MenuItem>
+      </Menu>
     </AppBar>
   );
 };
