@@ -39,6 +39,10 @@ const UserBox = styled(Box)(({ theme }) => ({
     display: "none",
   },
 }));
+const UserAvatar = styled(Avatar)({
+  width: "30px",
+  height: "30px"
+});
 
 const Navbar = () => {
   return (
@@ -60,10 +64,10 @@ const Navbar = () => {
           <Badge badgeContent={4} color="error">
             <NotificationsIcon></NotificationsIcon>
           </Badge>
-          <Avatar sx={{ width: 30, height: 30 }}>AB</Avatar>
+          <UserAvatar>AB</UserAvatar>
         </Icons>
         <UserBox>
-          <Avatar sx={{ width: 30, height: 30 }}>AB</Avatar>
+          <UserAvatar>AB</UserAvatar>
           <Typography variant="span">Alex</Typography>
         </UserBox>
       </StyledToolbar>
