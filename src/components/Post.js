@@ -17,7 +17,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 const Post = () => {
   return (
-    <Card sx={{marginBottom: 5, marginTop: 5}}>
+    <Card>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
@@ -34,7 +34,6 @@ const Post = () => {
       />
       <CardMedia
         component="img"
-        height="20%"
         image="https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701347521.jpg"
         alt="Paella dish"
       />
