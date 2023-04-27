@@ -21,67 +21,69 @@ import SettingsIcon from "@mui/icons-material/Settings";
 const Sidebar = () => {
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
-      <List>
-        <ListItem disablePadding>
-          <ListItemButton component="a" href="#home">
-            <ListItemIcon>
-              <HomeIcon></HomeIcon>
-            </ListItemIcon>
-            <ListItemText primary="Homepage" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton component="a" href="#pages">
-            <ListItemIcon>
-              <ArticleIcon></ArticleIcon>
-            </ListItemIcon>
-            <ListItemText primary="Pages" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton component="a" href="#groups">
-            <ListItemIcon>
-              <PeopleIcon></PeopleIcon>
-            </ListItemIcon>
-            <ListItemText primary="Groups" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton component="a" href="#marketplace">
-            <ListItemIcon>
-              <StorefrontIcon></StorefrontIcon>
-            </ListItemIcon>
-            <ListItemText primary="Marketplace" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton component="a" href="#settings">
-            <ListItemIcon>
-              <SettingsIcon></SettingsIcon>
-            </ListItemIcon>
-            <ListItemText primary="Settings" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <LanguageIcon></LanguageIcon>
-            </ListItemIcon>
-            <Select sx={{ height: "36px" }} id="lang" value={"en-us"}>
-              <MenuItem value={"en-us"}>English</MenuItem>
-              <MenuItem value={"de-de"}>German</MenuItem>
-            </Select>
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <DarkModeIcon></DarkModeIcon>
-            </ListItemIcon>
-            <Switch />
-          </ListItemButton>
-        </ListItem>
-      </List>
+      <Box position="fixed">
+        <List>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#home">
+              <ListItemIcon>
+                <HomeIcon></HomeIcon>
+              </ListItemIcon>
+              <ListItemText primary="Homepage" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#pages">
+              <ListItemIcon>
+                <ArticleIcon></ArticleIcon>
+              </ListItemIcon>
+              <ListItemText primary="Pages" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#groups">
+              <ListItemIcon>
+                <PeopleIcon></PeopleIcon>
+              </ListItemIcon>
+              <ListItemText primary="Groups" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#marketplace">
+              <ListItemIcon>
+                <StorefrontIcon></StorefrontIcon>
+              </ListItemIcon>
+              <ListItemText primary="Marketplace" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="#settings">
+              <ListItemIcon>
+                <SettingsIcon></SettingsIcon>
+              </ListItemIcon>
+              <ListItemText primary="Settings" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <LanguageIcon></LanguageIcon>
+              </ListItemIcon>
+              <Select sx={{ height: "36px" }} id="lang" value={"en-us"}>
+                <MenuItem value={"en-us"}>English</MenuItem>
+                <MenuItem value={"de-de"}>German</MenuItem>
+              </Select>
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <DarkModeIcon></DarkModeIcon>
+              </ListItemIcon>
+              <Switch />
+            </ListItemButton>
+          </ListItem>
+        </List>
+      </Box>
     </Box>
   );
 };
