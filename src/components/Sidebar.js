@@ -5,6 +5,8 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  MenuItem,
+  Select,
   Switch,
 } from "@mui/material";
 import React from "react";
@@ -13,6 +15,8 @@ import ArticleIcon from "@mui/icons-material/Article";
 import PeopleIcon from "@mui/icons-material/People";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LanguageIcon from "@mui/icons-material/Language";
+import SettingsIcon from "@mui/icons-material/Settings";
 
 const Sidebar = () => {
   return (
@@ -48,6 +52,25 @@ const Sidebar = () => {
               <StorefrontIcon></StorefrontIcon>
             </ListItemIcon>
             <ListItemText primary="Marketplace" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component="a" href="#settings">
+            <ListItemIcon>
+              <SettingsIcon></SettingsIcon>
+            </ListItemIcon>
+            <ListItemText primary="Settings" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <LanguageIcon></LanguageIcon>
+            </ListItemIcon>
+            <Select sx={{ height: "36px" }} id="lang" value={"en-us"}>
+              <MenuItem value={"en-us"}>English</MenuItem>
+              <MenuItem value={"de-de"}>German</MenuItem>
+            </Select>
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
