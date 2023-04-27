@@ -1,20 +1,16 @@
-import { Box } from "@mui/material";
+import { Stack } from "@mui/material";
 import React from "react";
 import Post from "./Post";
 
 const Feed = () => {
   return (
-    <Box
-      flex={4}
-      p={2}
-      sx={{ display: "flex", flexDirection: "column", gap: 4 }}
-    >
+    <Stack flex={4} p={2} gap={4} direction="column">
       <Post />
       <Post />
       <Post />
       <Post />
       <Post />
-    </Box>
+    </Stack>
   );
 };
 
