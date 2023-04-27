@@ -37,7 +37,14 @@ function AddPostModal({ isOpen, onClose }) {
       aria-describedby="modal-modal-description"
       disableScrollLock={true}
     >
-      <Box width={400} height={280} bgcolor="white" p={3} borderRadius={5}>
+      <Box
+        width={400}
+        height={280}
+        p={3}
+        borderRadius={5}
+        bgcolor="background.default"
+        color="text.primary"
+      >
         <Typography variant="h6" textAlign="center" color="gray">
           Create Post
         </Typography>

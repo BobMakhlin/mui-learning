@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <Box>
+    <Box bgcolor="background.default" color="text.primary">
       <Navbar />
       <Stack direction="row" spacing={2}>
         <Sidebar></Sidebar>

@@ -17,8 +17,11 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LanguageIcon from "@mui/icons-material/Language";
 import SettingsIcon from "@mui/icons-material/Settings";
+import { useColorMode } from "../store/color-mode-context";
 
 const Sidebar = () => {
+  const { toggleColorMode } = useColorMode();
+
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
       <Box position="fixed">
@@ -84,7 +87,7 @@ const Sidebar = () => {
               <ListItemIcon>
                 <DarkModeIcon></DarkModeIcon>
               </ListItemIcon>
-              <Switch />
+              <Switch onClick={toggleColorMode} />
             </ListItemButton>
           </ListItem>
         </List>
