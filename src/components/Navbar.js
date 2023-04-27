@@ -1,6 +1,5 @@
 import {
   AppBar,
-  Avatar,
   Badge,
   Box,
   InputBase,
@@ -16,6 +15,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { useState } from "react";
 import { useCallback } from "react";
+import UserAvatar from "../UI/UserAvatar";
 
 const StyledToolbar = styled(Toolbar)({
   justifyContent: "space-between",
@@ -43,11 +43,6 @@ const UserBox = styled(Box)(({ theme }) => ({
     display: "none",
   },
 }));
-const UserAvatar = styled(Avatar)({
-  width: "30px",
-  height: "30px",
-  cursor: "pointer",
-});
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

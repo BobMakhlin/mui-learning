@@ -2,7 +2,7 @@ import { Fab, Tooltip } from "@mui/material";
 import React from "react";
 import AddIcon from "@mui/icons-material/Add";
 
-const AddPost = () => {
+const AddButton = ({onClick}) => {
   return (
     <Tooltip title="Add">
       <Fab
@@ -12,8 +12,9 @@ const AddPost = () => {
           position: "fixed",
           left: { xs: "calc(50%)", sm: 20 },
           transform: { xs: "translate(-50%, 0)", sm: "translate(0, 0)" },
-          bottom: 20,
+          bottom: { xs: 5, sm: 20 },
         }}
+        onClick={onClick}
       >
         <AddIcon />
       </Fab>
@@ -21,4 +22,4 @@ const AddPost = () => {
   );
 };
 
-export default AddPost;
+export default AddButton;
