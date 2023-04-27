@@ -35,6 +35,7 @@ function AddPostModal({ isOpen, onClose }) {
       onClose={onClose}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
+      disableScrollLock={true}
     >
       <Box width={400} height={280} bgcolor="white" p={3} borderRadius={5}>
         <Typography variant="h6" textAlign="center" color="gray">
@@ -60,10 +61,7 @@ function AddPostModal({ isOpen, onClose }) {
           <VideoCameraBackIcon color="success" />
           <PersonAddIcon color="error" />
         </Stack>
-        <ButtonGroup
-          fullWidth
-          variant="contained"
-        >
+        <ButtonGroup fullWidth variant="contained">
           <Button>Post</Button>
           <Button sx={{ width: "25%" }}>
             <DateRangeIcon />

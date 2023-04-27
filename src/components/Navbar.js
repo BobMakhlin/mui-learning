@@ -93,6 +93,7 @@ const Navbar = () => {
           vertical: "top",
           horizontal: "right",
         }}
+        disableScrollLock={true}
       >
         <MenuItem>Profile</MenuItem>
         <MenuItem>My account</MenuItem>

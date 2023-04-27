@@ -68,7 +68,12 @@ const Sidebar = () => {
               <ListItemIcon>
                 <LanguageIcon></LanguageIcon>
               </ListItemIcon>
-              <Select sx={{ height: "36px" }} id="lang" value={"en-us"}>
+              <Select
+                inputProps={{ MenuProps: { disableScrollLock: true } }}
+                sx={{ height: "36px" }}
+                id="lang"
+                value={"en-us"}
+              >
                 <MenuItem value={"en-us"}>English</MenuItem>
                 <MenuItem value={"de-de"}>German</MenuItem>
               </Select>
