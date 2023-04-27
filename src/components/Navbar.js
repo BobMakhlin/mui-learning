@@ -45,13 +45,14 @@ const UserBox = styled(Box)(({ theme }) => ({
 }));
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuAnchorEl, setMenuAnchorEl] = useState(null);
+  const isMenuOpen = Boolean(menuAnchorEl);
 
-  const handleAvatarClick = useCallback(() => {
-    setIsMenuOpen(true);
+  const handleAvatarClick = useCallback((e) => {
+    setMenuAnchorEl(e.target);
   }, []);
   const handleMenuClose = useCallback(() => {
-    setIsMenuOpen(false);
+    setMenuAnchorEl(null);
   }, []);
 
   return (
@@ -85,6 +86,7 @@ const Navbar = () => {
         aria-labelledby="demo-positioned-button"
         onClose={handleMenuClose}
         open={isMenuOpen}
+        anchorEl={menuAnchorEl}
         anchorOrigin={{
           vertical: "top",
           horizontal: "right",
